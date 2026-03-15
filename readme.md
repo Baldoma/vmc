@@ -1,8 +1,18 @@
-# VMC MQTT Daemon
+# Zehnder VMC MQTT Daemon
 
-A custom Python daemon designed to bridge a VMC (Ventilazione Meccanica Controllata) unit with Home Assistant via MQTT. It communicates with the VMC over RS485, processes the proprietary serial packets, and provides a seamless Home Assistant integration using MQTT Auto-Discovery.
+A custom Python daemon designed to bridge a **Zehnder ComfoAir FIT 100** VMC (Ventilazione Meccanica Controllata) unit with Home Assistant via MQTT. 
 
-## Hardware Requirements
+This project completely bypasses and replaces the original **Zehnder ComfoLed** hardware controller. It communicates directly with the VMC over RS485, processes the proprietary serial packets, and provides a seamless Home Assistant integration using MQTT Auto-Discovery.
+
+## Supported Hardware & Specs
+
+* **VMC Unit:** Zehnder ComfoAir FIT 100
+  * Flow rate: up to 100 m³/h
+  * Heat Recovery: Enthalpy exchanger (up to 83% efficiency, no condensate drain needed)
+  * Control logic: 4 fan speeds + Standby + Filter/Fault alerts
+* **Replaced Controller:** Zehnder ComfoLed
+
+## Infrastructure Requirements
 
 The project has been developed and tested with the following hardware:
 * **Raspberry Pi Zero 2 W** (equipped with a standard SD card and a CPU heatsink for thermal management).
@@ -61,7 +71,7 @@ sudo nano /etc/systemd/system/vmc.service
 
 ```ini
 [Unit]
-Description=VMC MQTT Controller Daemon
+Description=Zehnder VMC MQTT Controller Daemon
 After=network.target
 
 [Service]

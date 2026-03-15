@@ -133,9 +133,9 @@ def publish_ha_discovery(client):
     # --- Master VMC Device Info ---
     device_info_vmc = {
         "identifiers": ["vmc_controller_master_01"],
-        "name": "VMC",
-        "model": "Python Custom Controller",
-        "manufacturer": "Home DIY"
+        "name": "VMC Zehnder",
+        "model": "ComfoAir FIT 100",
+        "manufacturer": "Zehnder"
     }
 
     # --- Gateway (Raspberry Pi) Device Info ---
