@@ -1,0 +1,25 @@
+# Ambienti virtuali Python
+venv/
+.venv/
+env/
+
+# File di configurazione e dati sensibili
+.env
+
+# File di log generati dal demone
+vmc_raw.log
+*.log
+vmclog.sh
+
+# Cache e file compilati Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurazione dell'editor (Visual Studio Code)
+.vscode/
+
+# File di sistema
+.DS_Store
+Thumbs.db
